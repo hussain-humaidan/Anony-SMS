@@ -2,13 +2,12 @@ import os
 import time
 from termcolor import colored
 import requests
-import sys
+import platform
 
 
 def main():
-    def logo():
-        print(colored(
-            """
+    print(colored(
+        """
     @@@@@@@@@@@@@@@@@@@@@@@@@@**********@@@@@@@@@@@@@@@@@@@@@@@@@@
     @@@@@@@@@@@@@@@@@*****************************@@@@@@@@@@@@@@@@
     @@@@@@@@@@@@**************************************@@@@@@@@@@@@
@@ -38,8 +37,6 @@ def main():
     We are not responsible of any illegal action
     """, 'blue'))
 
-    logo()
-
     time.sleep(1)
 
     print('1: Send sms')
@@ -48,10 +45,8 @@ def main():
 
     choices = input("\nPlease choice: ")
 
-    def SMS():
+    if choices == "1":
         os.system('clear')
-        time.sleep(1)
-        logo()
         time.sleep(1)
         smsnumb = input("Input the number of the target: ")
         message = input("Please input the message: ")
@@ -66,13 +61,8 @@ def main():
         time.sleep(3)
         return main()
 
-    if choices == "1":
-        SMS()
-
     elif choices == "2":
         os.system("clear")
-        time.sleep(1)
-        logo()
         time.sleep(1)
         lines = "=========================================================================================="
         print(
@@ -84,21 +74,18 @@ def main():
         )
         print(lines)
         print(
-            "Else: please contact hyprid tech in github or youtube"
+            "Anything more please report an issue at github"
         )
         print(lines)
         print(
-            "Follow the video to know more about the tool :)"
-            "*Please put the video link here Hussain*"
+            "Follow the video to know more about the tool :)\nhttps://youtu.be/dSdBRrozFBc"
         )
-
 
     elif choices == "3":
         os.system("clear")
         time.sleep(1)
-        logo()
         time.sleep(1)
-        print("\nhttps://www.youtube.com/channel/UC8GSC-wXvPiMSaQ8y6dltzQ\n\nHave fun legally :)")
+        print("\nhttps://www.youtube.com/@hybrid-technology\n\nHave fun legally :)")
 
 
 main()
