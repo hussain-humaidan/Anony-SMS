@@ -1,41 +1,11 @@
 import os
 import time
-from termcolor import colored
 import requests
 import platform
 
 
 def main():
-    print(colored(
-        """
-    @@@@@@@@@@@@@@@@@@@@@@@@@@**********@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@*****************************@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@**************************************@@@@@@@@@@@@
-    @@@@@@**************@@@@@@@@@@@@@@@@@@@@@@@**************@@@@@
-    @@@***    *****@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****    ***@@
-    @@***      **@@@@@@@@@@*****************@@@@@@@@@@**      **@@
-    @@@****  ***@@@@@@***************************@@@@@@***  ***@@@
-    @@@@@@@@@@@@*************@@@@@@@@@@@@@*************@@@@@@@@@@@
-    @@@@@@@@@@***    ***@@@@@@@@@@@@@@@@@@@@@@@***    **@@@@@@@@@@
-    @@@@@@@@@@@***  ***@@@@@@@***********@@@@@@@**   ***@@@@@@@@@@
-    @@@@@@@@@@@@@@*@@@@@***********************@@@@*@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@@**    *****@@@@@*****    **@@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@@***  ***@@@@@@@@@@@***  **@@@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@*******@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@*********@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@********@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@**@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    **@@@**@@@@@@@@@@@@@@@@@@**@@@@@@*@@@@@*@@@@@@@@@@@@@@@@@*@@@@
-    **@@@**@*@@@*@*****@@******@@*****@@@@****@*****@@*****@@*****
-    **@@@**@@*@*@@*@@@**@*@@@**@**@@@*@@@@@**@@*@***@@*@@@@@@*@@@*
-    **@@@**@@@**@@*@***@@*@@@**@****@*@@@@@***@*****@@*****@@*@@@*
-    @@@@@@@@**@@@@*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    
-    Created by Hussain Humaidan
-    Uploaded by Hyprid tech
-    We are not responsible of any illegal action
-    """, 'blue'))
+    import logo
 
     time.sleep(1)
 
@@ -46,7 +16,11 @@ def main():
     choices = input("\nPlease choice: ")
 
     if choices == "1":
-        os.system('clear')
+        if platform.system() == "Windows":
+            os.system('cls')
+        else:
+            os.system('clear')
+
         time.sleep(1)
         smsnumb = input("Input the number of the target: ")
         message = input("Please input the message: ")
@@ -58,12 +32,23 @@ def main():
         })
 
         print(resp.json())
-        time.sleep(3)
+        time.sleep(5)
+
+        if platform.system() == "Windows":
+            os.system('cls')
+        else:
+            os.system('clear')
+
         return main()
 
     elif choices == "2":
-        os.system("clear")
+        if platform.system() == "Windows":
+            os.system('cls')
+        else:
+            os.system('clear')
+
         time.sleep(1)
+
         lines = "=========================================================================================="
         print(
             "Your phone number was not provided in E.164 format: you need to input the country code ex.+91"
@@ -82,8 +67,11 @@ def main():
         )
 
     elif choices == "3":
-        os.system("clear")
-        time.sleep(1)
+        if platform.system() == "Windows":
+            os.system('cls')
+        else:
+            os.system('clear')
+
         time.sleep(1)
         print("\nhttps://www.youtube.com/@hybrid-technology\n\nHave fun legally :)")
 
