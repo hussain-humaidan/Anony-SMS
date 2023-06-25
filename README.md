@@ -1,5 +1,5 @@
-# <center> Anony-SMS </center>
+# Anony-SMS
 
-## <center>The tool is under construction !<center>
+## The tool is under construction !
 
-### <center>Anony is a python structure tool that sends sms with an anonymous number via API<center>
+### Anony is a python structure tool that sends sms with an anonymous number via API
